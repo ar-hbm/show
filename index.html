@@ -18,7 +18,11 @@
 
     <body style='margin : 0px; overflow: hidden;'>
         <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
-        <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+        <a-scene       arjs
+      embedded
+      renderer="logarithmicDepthBuffer: true;"
+      vr-mode-ui="enabled: false"
+      gesture-detector>
 
         <a-assets>
             <a-asset-item id="animated-asset" src="https://rawcdn.githack.com/happy-birthday-maryam/000/c18682880a51b2766079289ca7c39fbbf2610443/ww1.glb"></a-asset-item>
